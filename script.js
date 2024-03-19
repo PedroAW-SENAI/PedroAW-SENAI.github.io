@@ -1,9 +1,3 @@
-const botaoHomeDown = document.querySelector('[button-home-down]');
-const botaoHomeUp = document.querySelector('[button-home-up]');
-
-const listaHome = document.querySelector('[dropdown-home]');
-const linhaHome = document.querySelector('[linha-home]');
-
 const botaoSobreDown = document.querySelector('[button-sobre-down]');
 const botaoSobreUp = document.querySelector('[button-sobre-up]');
 
@@ -15,21 +9,6 @@ const botaoContatoUp = document.querySelector('[button-contato-up]');
 
 const listaContato = document.querySelector('[dropdown-contato]');
 const linhaContato = document.querySelector('[linha-contato]');
-
-
-botaoHomeDown.onclick = () => {
-    aparecer(listaHome);
-    desaparecer(botaoHomeDown);
-    desaparecer(linhaHome);
-    aparecer(botaoHomeUp);
-};
-
-botaoHomeUp.onclick = () => {
-    desaparecer(listaHome);
-    desaparecer(botaoHomeUp);
-    aparecer(linhaHome);
-    aparecer(botaoHomeDown);
-};
 
 botaoSobreDown.onclick = () => {
     aparecer(listaSobre);
