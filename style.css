@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+.menu_links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    list-style: none;    
+    gap: 20px;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;
+    background-color: #040024;
+    padding: 0 0 0 20px;
+    border-radius: 0 20px 20px 0;
+    width: 17vw;
+    height: 100vh;
+}
+
+.menu_links ol {
+    position: relative;
+    display: inline-block;
+    margin-top: 70px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu_links .title-section-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.menu_links li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu_links .button-dropdown-down {
+    background: none;
+    border: 0;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.menu_links .button-dropdown-up {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 20px;
+    color: #FFF;
+}
+    
+
+.dropdown {
+    display: none;
+    text-align: left;
+    background-color: #040024;
+    font-size: 18px;
+    margin: 15px 0 20px 15%;
+}
+
+
+.menu_links a {
+    display: flex;
+    text-decoration: none;
+    align-items: baseline;
+    color: #FFF;    
+    margin-right: 20px;
+}
+.menu_links .fa{
+    font-size: 23px;
+}
+
+.text {
+    font-size: 23px;
+    margin-left: 10px;
+    font-family: "Open Sans", sans-serif;
+    color: #FFF;
+}
+
+.menu_links .title_a:hover {
+    text-shadow: 2px 2px 0 #d2d2d2;
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+.menu_links hr {
+    height: 2px;
+    width: 90%;
+    color: #FFF;
+    border: 0;
+    background-color: #FFF;
+    margin: 0 0 20px 0;
+}
+
+.button-dropdown:hover .dropdown-child {
+    background-color: #FFF;
+    display: block;
+}
+
+.cabecalho {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-image: url("./assets/steam.png"); 
+    background-size: 82vw;
+    background-repeat: no-repeat;
+    margin-left: 17vw;
+    width: 80vw;
+    height: calc(82vw * 526/1320);
+}
+
+.cabecalho .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo h1 {
+    margin-top: 50px;
+    font-size: 80px;
+    font-family: 'Short Stack', cursive;
+    text-align: center;
+    color: #000;
+    
+    text-shadow:
+        3px 3px 0 #FFF,
+        -3px 3px 0 #FFF,
+        -3px -3px 0 #FFF,
+        3px -3px 0 #FFF;
+}
+
+
+
