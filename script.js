@@ -18,18 +18,30 @@ const botaoContatoUp = document.querySelector('[button-contato-up]');
 const listaContato = document.querySelector('[dropdown-contato]');
 const linhaContato = document.querySelector('[linha-contato]');
 
+const botaoAreasDown = document.querySelector('[button-areas-down]');
+const botaoAreasUp = document.querySelector('[button-areas-up]');
+
+const listaAreas = document.querySelector('[dropdown-areas]');
+const linhaAreas = document.querySelector('[linha-areas]');
+
+const sidebarReduzidaTamanho = "70px";
+
 botaoSidebarLeft.onclick = () => {
     aparecer(botaoSidebarRight);
     desaparecer(botaoSidebarLeft);
     desaparecer(sidebarCompleta);
     aparecer(sidebarReduzida);
-    cabecalho.style.width = "90vw";
-    cabecalho.style.marginLeft = "3vw";
+
     sidebarReduzida.style.paddingLeft = "15px";
-    sidebarContainer.style.minWidth = "70px";
-    sidebarContainer.style.width = "70px";
+    sidebarContainer.style.minWidth = sidebarReduzidaTamanho;
+    sidebarContainer.style.width = sidebarReduzidaTamanho;
     sidebarContainer.style.alignItems = "center";
     sidebarContainer.style.paddingLeft = "0px";
+    
+    cabecalho.style.width = "100vw";
+    cabecalho.style.marginLeft = "0px";
+    cabecalho.style.paddingLeft = sidebarReduzidaTamanho;
+    //cabecalho.style.marginLeft = "3vw";
 };
 
 botaoSidebarRight.onclick = () => {
@@ -37,12 +49,13 @@ botaoSidebarRight.onclick = () => {
     aparecer(botaoSidebarLeft);
     aparecer(sidebarCompleta);
     desaparecer(sidebarReduzida);
-    cabecalho.style.width = "80vw";
-    cabecalho.style.marginLeft = "250px";
     sidebarContainer.style.minWidth = "250px";
     sidebarContainer.style.width = "250px";
     sidebarContainer.style.alignItems = "flex-start";
     sidebarContainer.style.paddingLeft = "20px";
+    
+    cabecalho.style.width = "calc(100vw - 250px)";
+    cabecalho.style.marginLeft = "250px";
 };
 
 botaoSobreDown.onclick = () => {
@@ -59,6 +72,20 @@ botaoSobreUp.onclick = () => {
     aparecer(botaoSobreDown);
 };
 
+botaoAreasDown.onclick = () => {
+    aparecer(listaAreas);
+    desaparecer(botaoAreasDown);
+    desaparecer(linhaAreas);
+    aparecer(botaoAreasUp);
+};
+
+botaoAreasUp.onclick = () => {
+    desaparecer(listaAreas);
+    desaparecer(botaoAreasUp);
+    aparecer(linhaAreas);
+    aparecer(botaoAreasDown);
+};
+
 botaoContatoDown.onclick = () => {
     aparecer(listaContato);
     desaparecer(botaoContatoDown);
@@ -72,6 +99,8 @@ botaoContatoUp.onclick = () => {
     aparecer(linhaContato);
     aparecer(botaoContatoDown);
 };
+
+
 
 function aparecer(elementoHtml) {
     elementoHtml.style.display = "block";

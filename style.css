@@ -105,6 +105,9 @@ body {
     margin: 15px 0 20px 15%;
 }
 
+.dropdown a:hover {
+    color: aqua;
+}
 
 .menu_links a {
     display: flex;
@@ -181,10 +184,12 @@ ol .fa{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 0 0 50px;
     background-image: url("./assets/steam.png"); 
     background-size: 82vw;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-left: 17vw;
     width: 80vw;
     height: calc(82vw * 526/1320);
