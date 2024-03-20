@@ -8,67 +8,81 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="menu_links">
-        <div class="controles-nav">
-            <a href="index.html">
-                <span class="fa fa-home"></span>
-            </a>
+<body> 
+    <nav sidebar class="menu_links">
+        <div sidebarCompleta class="sidebar-completa">
 
-            <button class="button-sidedar-left">
-                <span class="fa fa-chevron-left"></span>
-            </button>
-        </div>
-        <ol>
-            <li>
-                <div class = "title-section-nav">
-                    <a href="sobre.html">
-                        <span class="fa fa-user"></span>
-                        <span class="text">Sobre</span>
-                    </a>
-                    <button button-sobre-down class="button-dropdown-down">
-                        <span class="fa fa-chevron-down"></span>
-                    </button>
-                    <button button-sobre-up class="button-dropdown-up">
-                        <span class="fa fa-chevron-up"></span>
-                    </button>
-                </div>
-
-                <div dropdown-sobre class="dropdown">
-                    <a href="sobre.html">Sobre</a>
-                    <a href="contato.html">Contato</a>
-                </div>
-            </li>
-            <hr linha-sobre>
-            <!-- areas de conhecimento-->
-
-            <li>
-                <div class = "title-section-nav">
-                    <a href="areas-de-conhecimento.html">
-                        <span class="fa fa-book"></span>
-                        <span class="text">Areas de conhecimento</span>
-                    </a>
-                    <button button-areas-down class="button-dropdown-down">
-                        <span class="fa fa-chevron-down"></span>
+            <div class="controles-nav">
+                <a href="index.html">
+                    <span home class="fa fa-home"></span>
+                </a>
+                
+                <button button-sidebar-left class="button-sidedar left">
+                    <span class="fa fa-chevron-left"></span>
+                </button>            
+            </div>
+            
+            <ol>
+                <li>
+                    <div class = "title-section-nav">
+                        <a href="sobre.html">
+                            <span class="fa fa-user"></span>
+                            <span text class="text">Sobre</span>
+                        </a>
+                        <button button-sobre-down class="button-dropdown-down">
+                            <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <button button-sobre-up class="button-dropdown-up">
+                            <span class="fa fa-chevron-up"></span>
+                        </button>
+                    </div>
+                    
+                    <div dropdown-sobre class="dropdown">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </li>
+                <hr linha-sobre>
+                <!-- areas de conhecimento-->
+                
+                <li>
+                    <div class = "title-section-nav">
+                        <a href="areas-de-conhecimento.html">
+                            <span class="fa fa-book"></span>
+                            <span text class="text">Áreas de conhecimento</span>
+                        </a>
+                        <button button-areas-down class="button-dropdown-down">
+                            <span class="fa fa-chevron-down"></span>
                     </button>
                     <button button-areas-up class="button-dropdown-up">
                         <span class="fa fa-chevron-up"></span>
                     </button>
-                </div>
-
-                <div dropdown-areas class="dropdown">
-                    <a href="areas-de-conhecimento.html">Areas de conhecimento</a>
-                    <a href="ciencia-da-natureza.html">Ciência da natureza</a>
-                    <a href="ciencia-humanas.html">Ciências humanas</a>
-                    <a href="matematica.html">Matemática</a>
-                </div>
-            </li>
-            <hr linha-areas>            
-                        
-        </ol>
+                    </div>
+                    
+                    <div dropdown-areas class="dropdown">
+                        <a href="areas-de-conhecimento.html">Areas de conhecimento</a>
+                        <a href="ciencia-da-natureza.html">Ciência da natureza</a>
+                        <a href="ciencia-humanas.html">Ciências humanas</a>
+                        <a href="matematica.html">Matemática</a>
+                    </div>
+                </li>
+                <hr linha-areas>                        
+            </ol>
+        </div>
+        <div sidebarReduzida class="sidebarReduzida">
+            <a href="index.html" id="homeR">
+                <span home class="fa fa-home"></span>
+            </a>
+            <div button-sidebar-right class="button-sidedar right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <a href="sobre.html">
+                <span class="fa fa-user"></span>
+            </a>
+        </div>
     </nav>
     
-    <header class="cabecalho">
+    <header cabecalho class="cabecalho">
         <div class = "titulo">
             <h1>Sobre mim</h1>
         </div>

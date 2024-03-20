@@ -18,7 +18,8 @@ body {
     background-color: #040024;
     padding: 0 0 0 20px;
     border-radius: 0 20px 20px 0;
-    width: 250px;
+    width: 17vw;
+    min-width: 250px;
     height: 100vh;
 }
 
@@ -31,7 +32,8 @@ body {
     margin-top: 20px;
 }
 
-.controles-nav .button-sidedar-left {
+.button-sidedar {
+    display: flex;
     font-size: 30px;
     color: #FFF;
     text-decoration: none;
@@ -41,11 +43,14 @@ body {
     border-radius: 20px;
     align-items: center;
     justify-content: center;
-    padding-right: 1px;
     height: 50px;
     width: 50px;
 }
 
+.button-sidedar.right {
+    display: none;
+    margin-top: 20px;
+}
 .fa {
     font-size: 30px;
     color: #FFF;
@@ -107,6 +112,7 @@ body {
     align-items: baseline;
     color: #FFF;    
     margin-right: 20px;
+    align-items: center;
 }
 ol .fa{
     font-size: 23px;
@@ -139,8 +145,37 @@ ol .fa{
     display: block;
 }
 
+.sidebarReduzida {
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarReduzida .button-sidedar {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 50px;
+}
+
+.sidebarReduzida .fa{
+    margin: 20px 0 0 10px;
+}
+
+.button-sidedar .fa-chevron-right {
+    margin-left: 15.625px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.sidebarReduzida .fa:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
 .cabecalho {
-    background-color: #333;
+    background-color: #504c4c;
     color: white;
     display: flex;
     flex-direction: column;
