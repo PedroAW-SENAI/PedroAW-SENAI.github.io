@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 </head>
 <body> 
     <nav sidebar class="menu_links">
-        <div sidebarCompleta class="sidebar-completa">
+        <div sidebarCompleta class="sidebarCompleta">
 
             <div class="controles-nav">
                 <a href="index.html">
@@ -82,40 +82,75 @@
                     </div>
 
                     <div dropdown-steam class="dropdown">
-                        <a href="steam.html">STEAM</a>
-                        <a href="sobre.html">Sobre</a>
-                        <a href="contato.html">Contato</a>
+                        <div lista-projetos-livres class="lista-projetos-livres">
+                            <div projetos-livres-titulo class="projetos-livres-titulo">
+                                <a href="projetos-livres.html">Projetos Livres</a>
+    
+                                <button button-projetos-livres-down id="button-dropdown-down-projetos-livres">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-projetos-livres-up id="button-dropdown-up-projetos-livres">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
+
+                            <div dropdown-projetos-livres class="dropdown" id="dropdown-projetos-livres">
+                                <a href="projetos-livres-teofilo.html">Prof. Teófilo</a>
+                                <a href="projetos-livres-eliane.html">Prof. Eliane</a>
+                                <a href="projetos-livres-sandro.html">Prof. Sandro</a>
+                                <a href="projetos-livres-adriano.html">Prof. Adriano</a>
+                            </div>
+                        </div>
+
+                        <a href="app-e-games.html">App & Games</a>
+                        <a href="biohackeria.html">Biohackeria</a>
+                        <a href="midias-digitais.html">Mídias Digitais</a>
+                        <a href="robotica.html">Robótica</a>
                     </div>  
-                </li>
+                </li> 
                 <hr linha-steam>
             </ol>
         </div>
         <div sidebarReduzida class="sidebarReduzida">
-            <a href="index.html" id="homeR">
-                <span home class="fa fa-home"></span>
-            </a>
             <div button-sidebar-right class="button-sidedar right">
                 <span class="fa fa-chevron-right"></span>
             </div>
+            <a href="index.html">
+                <span home class="fa fa-home"></span>
+            </a>
             <a href="sobre.html">
                 <span class="fa fa-user"></span>
             </a>
             <a href="areas-de-conhecimento.html">
                 <span class="fa fa-book"></span>
             </a>
+            <a href="steam.html">
+                <span class="fa fa-atom"></span>
+            </a>
         </div>
     </nav>
     
-    <header cabecalho class="cabecalho">
-        <div class = "titulo">
-            <h1>Sobre mim</h1>
-        </div>
-    
-    </header>
+    <main main>
+        <div fundoEscuro class="fundoEscuro"></div>
+        <header cabecalho class="cabecalho">
+            <div class="fundoEscuroCabecalho"></div>
+            <div class = "titulo">
+                <h1>Sobre mim</h1>
+            </div>        
+        </header>
+        <div class="teste">
 
-    <main>
+        </div>
+
+        <div class="corpo-conteudo">
+            <h2>Quem sou eu?</h2>
+            <h2>Sonhos</h2>
+        </div>
+
 
     </main>
+
+
     <script src="script.js"></script>
 </body>
 </html>

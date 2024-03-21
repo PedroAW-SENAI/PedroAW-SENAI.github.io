@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +8,141 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="menu_links">        
-        <ol>
-            <li>
-                <div class = "title-section-nav">
-                    <a href="sobre.html">
-                        <span class="fa fa-user"></span>
-                        <span class="text">Sobre</span>
-                    </a>
-                    <button button-sobre-down class="button-dropdown-down">
-                        <span class="fa fa-chevron-down"></span>
+<body> 
+    <nav sidebar class="menu_links">
+        <div sidebarCompleta class="sidebarCompleta">
+
+            <div class="controles-nav">
+                <a href="index.html">
+                    <span home class="fa fa-home"></span>
+                </a>
+                
+                <button button-sidebar-left class="button-sidedar left">
+                    <span class="fa fa-chevron-left"></span>
+                </button>            
+            </div>
+            
+            <ol>
+                <li>
+                    <div class = "title-section-nav">
+                        <a href="sobre.html">
+                            <span class="fa fa-user"></span>
+                            <span text class="text">Sobre</span>
+                        </a>
+                        <button button-sobre-down class="button-dropdown-down">
+                            <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <button button-sobre-up class="button-dropdown-up">
+                            <span class="fa fa-chevron-up"></span>
+                        </button>
+                    </div>
+                    
+                    <div dropdown-sobre class="dropdown">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </li>
+                <hr linha-sobre>
+                
+                <li>
+                    <div class = "title-section-nav">
+                        <a href="areas-de-conhecimento.html">
+                            <span class="fa fa-book"></span>
+                            <span text class="text">Áreas de conhecimento</span>
+                        </a>
+                        <button button-areas-down class="button-dropdown-down">
+                            <span class="fa fa-chevron-down"></span>
                     </button>
-                    <button button-sobre-up class="button-dropdown-up">
+                    <button button-areas-up class="button-dropdown-up">
                         <span class="fa fa-chevron-up"></span>
                     </button>
-                </div>
+                    </div>
+                    
+                    <div dropdown-areas class="dropdown">
+                        <a href="ciencia-da-natureza.html">Ciência da natureza</a>
+                        <a href="ciencia-humanas.html">Ciências humanas</a>
+                        <a href="matematica.html">Matemática</a>
+                        <a href="linguagens.html">Linguagens</a>
+                    </div>
+                </li>
+                <hr linha-areas>
+                
+                <li>
+                    <div class = "title-section-nav">
+                        <a href="steam.html">
+                            <span class="fa fa-atom"></span>
+                            <span text class="text">STEAM</span>
+                        </a>
+                        <button button-steam-down class="button-dropdown-down">
+                            <span class="fa fa-chevron-down"></span>
+                        </button>
+                        <button button-steam-up class="button-dropdown-up">
+                            <span class="fa fa-chevron-up"></span>
+                        </button>
+                    </div>
 
-                <div dropdown-sobre class="dropdown">
-                    <a href="sobre.html">Sobre</a>
-                    <a href="contato.html">Contato</a>
-                </div>
-            </li>
-            <hr linha-sobre>
-            <li>
-                <div class = "title-section-nav">
-                    <a href="contato.html">
-                        <span class="fa fa-envelope"></span>
-                        <span class="text">Contato</span>
-                    </a>
-                    <button button-contato-down class="button-dropdown-down">
-                        <span class="fa fa-chevron-down"></span>
-                    </button>
-                    <button button-contato-up class="button-dropdown-up">
-                        <span class="fa fa-chevron-up"></span>
-                    </button>
-                </div>
+                    <div dropdown-steam class="dropdown">
+                        <div lista-projetos-livres class="lista-projetos-livres">
+                            <div projetos-livres-titulo class="projetos-livres-titulo">
+                                <a href="projetos-livres.html">Projetos Livres</a>
+    
+                                <button button-projetos-livres-down id="button-dropdown-down-projetos-livres">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-projetos-livres-up id="button-dropdown-up-projetos-livres">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
 
-                <div dropdown-contato class="dropdown">
-                    <a href="sobre.html">Sobre</a>
-                    <a href="contato.html">Contato</a>
-                </div>
-            </li>
-            <hr linha-contato>
-        </ol>
+                            <div dropdown-projetos-livres class="dropdown" id="dropdown-projetos-livres">
+                                <a href="projetos-livres-teofilo.html">Prof. Teófilo</a>
+                                <a href="projetos-livres-eliane.html">Prof. Eliane</a>
+                                <a href="projetos-livres-sandro.html">Prof. Sandro</a>
+                                <a href="projetos-livres-adriano.html">Prof. Adriano</a>
+                            </div>
+                        </div>
+
+                        <a href="app-e-games.html">App & Games</a>
+                        <a href="biohackeria.html">Biohackeria</a>
+                        <a href="midias-digitais.html">Mídias Digitais</a>
+                        <a href="robotica.html">Robótica</a>
+                    </div>  
+                </li> 
+                <hr linha-steam>
+            </ol>
+        </div>
+        <div sidebarReduzida class="sidebarReduzida">
+            <div button-sidebar-right class="button-sidedar right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+            <a href="index.html">
+                <span home class="fa fa-home"></span>
+            </a>
+            <a href="sobre.html">
+                <span class="fa fa-user"></span>
+            </a>
+            <a href="areas-de-conhecimento.html">
+                <span class="fa fa-book"></span>
+            </a>
+            <a href="steam.html">
+                <span class="fa fa-atom"></span>
+            </a>
+        </div>
     </nav>
     
-    <header class="cabecalho">
-        <div class = "titulo">
-            <h1>Portfólio<br>SENAI 2933</h1>
+    <main main>
+        <div fundoEscuro class="fundoEscuro">
+
         </div>
-    
-    </header>
-    
-
-    <main>
-
+        <header cabecalho class="cabecalho">
+            <div class = "titulo">
+                <h1>Portfólio<br>SENAI 2933</h1>
+            </div>
+        
+        </header>
     </main>
+
+
     <script src="script.js"></script>
 </body>
 </html>

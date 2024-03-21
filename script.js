@@ -10,13 +10,7 @@ const botaoSobreDown = document.querySelector('[button-sobre-down]');
 const botaoSobreUp = document.querySelector('[button-sobre-up]');
 
 const listaSobre = document.querySelector('[dropdown-sobre]');
-const linhaSobre = document.querySelector('[linha-sobre]');
-
-const botaoContatoDown = document.querySelector('[button-contato-down]');
-const botaoContatoUp = document.querySelector('[button-contato-up]');
-
-const listaContato = document.querySelector('[dropdown-contato]');
-const linhaContato = document.querySelector('[linha-contato]');
+const linhaSobre = document.querySelector('[linha-sobre]'); 
 
 const botaoAreasDown = document.querySelector('[button-areas-down]');
 const botaoAreasUp = document.querySelector('[button-areas-up]');
@@ -24,24 +18,38 @@ const botaoAreasUp = document.querySelector('[button-areas-up]');
 const listaAreas = document.querySelector('[dropdown-areas]');
 const linhaAreas = document.querySelector('[linha-areas]');
 
+const botaoSteamDown = document.querySelector('[button-steam-down]');
+const botaoSteamUp = document.querySelector('[button-steam-up]');
+
+const listaSteam = document.querySelector('[dropdown-steam]');
+const linhaSteam = document.querySelector('[linha-steam]');
+
+const botaoProjetosLivresDown = document.querySelector('[button-projetos-livres-down]');
+const botaoProjetosLivresUp = document.querySelector('[button-projetos-livres-up]');
+
+const listaProjetosLivres = document.querySelector('[dropdown-projetos-livres]');
+const linhaProjetosLivres = document.querySelector('[linha-projetos-livres]');
+
+const main = document.querySelector('[main]');
+const fundoEscuro = document.querySelector('[fundoEscuro]');
+/*
+const botaoContatoDown = document.querySelector('[button-contato-down]');
+const botaoContatoUp = document.querySelector('[button-contato-up]');
+
+const listaContato = document.querySelector('[dropdown-contato]');
+const linhaContato = document.querySelector('[linha-contato]');
+*/
+
 const sidebarReduzidaTamanho = "70px";
 
-botaoSidebarLeft.onclick = () => {
-    aparecer(botaoSidebarRight);
-    desaparecer(botaoSidebarLeft);
-    desaparecer(sidebarCompleta);
-    aparecer(sidebarReduzida);
+main.onclick = () => {
+    if ( sidebarCompleta.style.display != "none" ) {
+        recolherMenuLateral();
+    }
+};
 
-    sidebarReduzida.style.paddingLeft = "15px";
-    sidebarContainer.style.minWidth = sidebarReduzidaTamanho;
-    sidebarContainer.style.width = sidebarReduzidaTamanho;
-    sidebarContainer.style.alignItems = "center";
-    sidebarContainer.style.paddingLeft = "0px";
-    
-    cabecalho.style.width = "100vw";
-    cabecalho.style.marginLeft = "0px";
-    cabecalho.style.paddingLeft = sidebarReduzidaTamanho;
-    //cabecalho.style.marginLeft = "3vw";
+botaoSidebarLeft.onclick = () => {
+    recolherMenuLateral();
 };
 
 botaoSidebarRight.onclick = () => {
@@ -53,9 +61,15 @@ botaoSidebarRight.onclick = () => {
     sidebarContainer.style.width = "250px";
     sidebarContainer.style.alignItems = "flex-start";
     sidebarContainer.style.paddingLeft = "20px";
+    cabecalho.style.paddingLeft = "40px";
+    cabecalho.style.zIndex = "-1";
     
+    fundoEscuro.style.display = "block";
+    fundoEscuro.style.zIndex = "3";
+    sidebarContainer.style.zIndex = "4";
+    /*
     cabecalho.style.width = "calc(100vw - 250px)";
-    cabecalho.style.marginLeft = "250px";
+    cabecalho.style.marginLeft = "250px";*/
 };
 
 botaoSobreDown.onclick = () => {
@@ -86,6 +100,33 @@ botaoAreasUp.onclick = () => {
     aparecer(botaoAreasDown);
 };
 
+botaoSteamDown.onclick = () => {
+    aparecer(listaSteam);
+    desaparecer(botaoSteamDown);
+    desaparecer(linhaSteam);
+    aparecer(botaoSteamUp);
+};
+
+botaoSteamUp.onclick = () => {
+    desaparecer(listaSteam);
+    desaparecer(botaoSteamUp);
+    aparecer(linhaSteam);
+    aparecer(botaoSteamDown);
+};
+
+botaoProjetosLivresDown.onclick = () => {
+    aparecer(listaProjetosLivres);
+    desaparecer(botaoProjetosLivresDown);
+    aparecer(botaoProjetosLivresUp);
+};
+
+botaoProjetosLivresUp.onclick = () => {
+    desaparecer(listaProjetosLivres);
+    desaparecer(botaoProjetosLivresUp);
+    aparecer(botaoProjetosLivresDown);
+};
+
+/*
 botaoContatoDown.onclick = () => {
     aparecer(listaContato);
     desaparecer(botaoContatoDown);
@@ -99,7 +140,7 @@ botaoContatoUp.onclick = () => {
     aparecer(linhaContato);
     aparecer(botaoContatoDown);
 };
-
+*/
 
 
 function aparecer(elementoHtml) {
@@ -108,4 +149,25 @@ function aparecer(elementoHtml) {
 
 function desaparecer(elementoHtml) {
     elementoHtml.style.display = "none";
+}
+
+function recolherMenuLateral() {
+    aparecer(botaoSidebarRight);
+    desaparecer(botaoSidebarLeft);
+    desaparecer(sidebarCompleta);
+    aparecer(sidebarReduzida);
+
+    sidebarReduzida.style.paddingLeft = "15px";
+    sidebarContainer.style.minWidth = sidebarReduzidaTamanho;
+    sidebarContainer.style.width = sidebarReduzidaTamanho;
+    sidebarContainer.style.alignItems = "center";
+    sidebarContainer.style.paddingLeft = "0px";
+    
+    cabecalho.style.width = "calc(100vw - 40px)";
+    cabecalho.style.marginLeft = "0px";
+
+    fundoEscuro.style.display = "none";
+
+    /*cabecalho.style.paddingLeft = sidebarReduzidaTamanho;*/
+    //cabecalho.style.marginLeft = "3vw";
 }
