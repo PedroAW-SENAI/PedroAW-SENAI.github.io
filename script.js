@@ -1,3 +1,6 @@
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+
 const botaoSidebarLeft = document.querySelector('[button-sidebar-left]');
 const botaoSidebarRight = document.querySelector('[button-sidebar-right]');
 const sidebarCompleta = document.querySelector('[sidebarCompleta]');
@@ -33,11 +36,12 @@ const linhaProjetosLivres = document.querySelector('[linha-projetos-livres]');
 const main = document.querySelector('[main]');
 const fundoEscuro = document.querySelector('[fundoEscuro]');
 
-const textoTopicoQuemEuSou = document.querySelector('[texto-topico-quem-eu-sou]');
 const imagemQuemEuSou = document.querySelector('[imagem-quem-eu-sou]');
-
-imagemQuemEuSou.style.height = textoTopicoQuemEuSou.clientHeight + "px";
-imagemQuemEuSou.setAttribute("src","/assets/imagemFamilia.png");
+const conteudoTopicoQuemEuSou = document.querySelector('[conteudo-topico-quem-eu-sou]');
+const topicoQuemEuSou = document.querySelector('[topico-quem-eu-sou]');
+const textoTopicoQuemEuSou = document.querySelector('[texto-topico-quem-eu-sou]');
+const imagemTopicoContainerQuemEuSou = document.querySelector('[imagem-topico-container-quem-eu-sou]');
+redimensionarImagemTopico();
 /*
 const botaoContatoDown = document.querySelector('[button-contato-down]');
 const botaoContatoUp = document.querySelector('[button-contato-up]');
@@ -46,8 +50,11 @@ const listaContato = document.querySelector('[dropdown-contato]');
 const linhaContato = document.querySelector('[linha-contato]');
 */
 
-const sidebarReduzidaTamanho = "70px";
+window.addEventListener("resize", () => {    
+    redimensionarImagemTopico();
+});
 
+const sidebarReduzidaTamanho = "70px";
 main.onclick = () => {
     if ( sidebarCompleta.style.display != "none" ) {
         recolherMenuLateral();
@@ -176,4 +183,24 @@ function recolherMenuLateral() {
 
     /*cabecalho.style.paddingLeft = sidebarReduzidaTamanho;*/
     //cabecalho.style.marginLeft = "3vw";
+}
+
+function redimensionarImagemTopico () {
+    const imagemQuemEuSou = document.querySelector('[imagem-quem-eu-sou]');
+    imagemQuemEuSou.style.height = "0px";
+    const conteudoTopicoQuemEuSou = document.querySelector('[conteudo-topico-quem-eu-sou]');
+
+    imagemQuemEuSou.style.height = conteudoTopicoQuemEuSou.clientHeight + "px";
+    imagemQuemEuSou.setAttribute("src","/assets/imagemFamilia.png");
+
+    if ( topicoQuemEuSou.clientWidth / topicoQuemEuSou.clientHeight < 1.3 ) {
+        topicoQuemEuSou.style.flexDirection = "column";
+        textoTopicoQuemEuSou.style.maxWidth = "78vw";
+        imagemQuemEuSou.style.height = "auto";
+        imagemQuemEuSou.style.maxWidth = "60vw";
+        imagemTopicoContainerQuemEuSou.style.width = "80vw";
+        imagemTopicoContainerQuemEuSou.style.justifyContent = "center";
+    } else {
+        topicoQuemEuSou.style.flexDirection = "row";
+    }   
 }

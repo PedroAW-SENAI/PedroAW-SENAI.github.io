@@ -44,7 +44,7 @@ body {
     border-radius: 0 20px 20px 0;
     width: 70px;
     min-width: 70px;
-    height: 100vh;
+    height: 100%;
     overflow:auto; 
     z-index: 10;
 }
@@ -317,20 +317,19 @@ ol .fa{
 
 .topicos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: rgb(207, 244, 255);
-    padding: 20px;
+    padding: 20px 20px 20px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #00000077;
     max-width: 85vw;
+    margin-right: 20px;
+    align-items: center;
 }
 
-.conteudo-topico {
+.texto-topico {
     display: flex;
-    flex-direction: row;
-}
-
-.texto-topico p {
+    flex-direction: column;
     font-family: "Lexend", sans-serif;
     font-size: 18px;
     color: #000;
@@ -339,7 +338,63 @@ ol .fa{
     text-align: justify;
 } 
 
+.texto-topico p {
+    margin-bottom: 20px;
+}
+
+.imagem-topico {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    overflow: hidden;
+}
+
 .imagem-topico img {
     margin-left: 3vw;
     max-width: 35vw;
+    z-index: 1;
 }
+
+.imagem-topico:hover .botoes{ 
+    background-color: #504c4c91;
+    /*duração animação*/
+    transition: 1s;
+    top: 50%;
+}
+
+.imagem-topico .botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 10px; 
+    background-color: #504c4c00;
+    border-radius: 50%;
+}
+
+.imagem-topico .fa {
+    margin: 0;
+    padding: 0;
+}
+
+.imagem-topico .left {
+    top: 100%;
+    left: 20%;
+}
+
+.left .fa {
+    margin-right: 5px;
+}
+
+.imagem-topico .right {
+    top: 100%;
+    left: 75%;
+}
+
