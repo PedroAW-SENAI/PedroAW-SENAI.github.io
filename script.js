@@ -32,6 +32,12 @@ const linhaProjetosLivres = document.querySelector('[linha-projetos-livres]');
 
 const main = document.querySelector('[main]');
 const fundoEscuro = document.querySelector('[fundoEscuro]');
+
+const textoTopicoQuemEuSou = document.querySelector('[texto-topico-quem-eu-sou]');
+const imagemQuemEuSou = document.querySelector('[imagem-quem-eu-sou]');
+
+imagemQuemEuSou.style.height = textoTopicoQuemEuSou.clientHeight + "px";
+imagemQuemEuSou.setAttribute("src","/assets/imagemFamilia.png");
 /*
 const botaoContatoDown = document.querySelector('[button-contato-down]');
 const botaoContatoUp = document.querySelector('[button-contato-up]');

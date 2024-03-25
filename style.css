@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     margin: 0;
@@ -281,13 +286,14 @@ ol .fa{
     margin: 20px 0 0 70px;
     display: flex;
     flex-direction: column;
-    padding-left: 5vw;
+    padding-left: 2vw;
 }
 
 .corpo-conteudo h2 {
     font-family: 'Short Stack', cursive;
     font-size: 3rem;
     color: #000;
+    margin-bottom: 30px;
 }
 
 .fundoEscuroCabecalho {
@@ -300,10 +306,40 @@ ol .fa{
     z-index: 1;
 }
 
-.teste {
+.gradienteInferiorTitulo {
     /*gradiente de #686464 para #f0f8ff de cima para baixo */
     background: -webkit-linear-gradient(#787474, #f0f8ff);
     z-index: 5;
     width: 100vw;
     height: 80px;
+    margin-bottom: 40px;
+}
+
+.topicos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(207, 244, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000077;
+    max-width: 85vw;
+}
+
+.conteudo-topico {
+    display: flex;
+    flex-direction: row;
+}
+
+.texto-topico p {
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+    max-width: 45vw;
+    text-align: justify;
+} 
+
+.imagem-topico img {
+    margin-left: 3vw;
+    max-width: 35vw;
 }
