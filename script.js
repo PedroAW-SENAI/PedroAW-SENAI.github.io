@@ -42,6 +42,10 @@ const topicoQuemEuSou = document.querySelector('[topico-quem-eu-sou]');
 const textoTopicoQuemEuSou = document.querySelector('[texto-topico-quem-eu-sou]');
 const imagemTopicoContainerQuemEuSou = document.querySelector('[imagem-topico-container-quem-eu-sou]');
 redimensionarImagemTopico();
+
+const botaoLeftQuemEuSou = document.querySelector('[botao-left-quem-eu-sou]');
+const botaoRightQuemEuSou = document.querySelector('[botao-right-quem-eu-sou]');
+
 /*
 const botaoContatoDown = document.querySelector('[button-contato-down]');
 const botaoContatoUp = document.querySelector('[button-contato-up]');
@@ -202,5 +206,10 @@ function redimensionarImagemTopico () {
         imagemTopicoContainerQuemEuSou.style.justifyContent = "center";
     } else {
         topicoQuemEuSou.style.flexDirection = "row";
-    }   
+    }
+    
+    adicional = 10;
+    restoCadaLado = ( imagemTopicoContainerQuemEuSou.clientWidth - imagemQuemEuSou.clientWidth ) / 2 ;
+    botaoLeftQuemEuSou.style.left = ( restoCadaLado + adicional ) + "px";
+    botaoRigthQuemEuSou.style.left = ( imagemTopicoContainerQuemEuSou.clientWidth - restoCadaLado - adicional ) + "px";
 }
