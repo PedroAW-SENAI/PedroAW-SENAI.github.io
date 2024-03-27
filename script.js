@@ -208,8 +208,8 @@ function redimensionarImagemTopico () {
         topicoQuemEuSou.style.flexDirection = "row";
     }
     
-    adicional = 10;
-    restoCadaLado = ( imagemTopicoContainerQuemEuSou.clientWidth - imagemQuemEuSou.clientWidth ) / 2 ;
+    const adicional = 30;
+    const restoCadaLado = ( imagemTopicoContainerQuemEuSou.clientWidth - imagemQuemEuSou.clientWidth ) / 2 ;
     botaoLeftQuemEuSou.style.left = ( restoCadaLado + adicional ) + "px";
-    botaoRigthQuemEuSou.style.left = ( imagemTopicoContainerQuemEuSou.clientWidth - restoCadaLado - adicional ) + "px";
+    botaoRightQuemEuSou.style.left = ( imagemTopicoContainerQuemEuSou.clientWidth - restoCadaLado - adicional ) + "px";
 }
