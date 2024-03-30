@@ -9,7 +9,9 @@ body {
     position: absolute;
     min-height: 100vh;
     background-color: #f0f8ff;
+    overflow-x: hidden;
 }
+
 
 .fundoEscuro {
     width: 100vw;
@@ -323,7 +325,6 @@ ol .fa{
     border-radius: 10px;
     box-shadow: 0 0 10px #00000077;
     max-width: 85vw;
-    margin-right: 20px;
     align-items: center;
 }
 
@@ -351,7 +352,7 @@ ol .fa{
 }
 
 .imagem-topico img {
-    margin-left: 3vw;
+
     max-width: 35vw;
     z-index: 1;
 }
@@ -386,7 +387,22 @@ ol .fa{
 
 .imagem-topico .left {
     top: 100%;
-    left: 20%;
+    left: 60%;
+}
+
+@keyframes clicou {
+    0% {
+        background-color: #504c4c00;
+    }
+    40% {
+        background-color: rgb(165, 166, 167);
+    }
+    50% {
+        background-color: rgb(165, 166, 167);
+    }
+    100% {
+        background-color: #504c4c00;
+    }
 }
 
 .left .fa {
@@ -395,6 +411,6 @@ ol .fa{
 
 .imagem-topico .right {
     top: 100%;
-    left: 75%;
+    left: 20%;
 }
 
