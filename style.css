@@ -326,6 +326,7 @@ ol .fa{
     box-shadow: 0 0 10px #00000077;
     max-width: 85vw;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .texto-topico {
