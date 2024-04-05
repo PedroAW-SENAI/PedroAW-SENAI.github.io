@@ -29,7 +29,7 @@
                             <span class="fa fa-user"></span>
                             <span text class="text">Sobre</span>
                         </a>
-                        <button button-sobre-down class="button-dropdown-down">
+                        <button button-sobre-down class="button-dropdown-down" style="display: none;">
                             <span class="fa fa-chevron-down"></span>
                         </button>
                         <button button-sobre-up class="button-dropdown-up">
@@ -59,7 +59,24 @@
                     </div>
                     
                     <div dropdown-areas class="dropdown">
-                        <a href="ciencia-da-natureza.html">Ciência da natureza</a>
+                        <div lista-ciencias-natureza class="lista-ciencias-natureza">
+                            <div ciencias-natureza-titulo class="ciencias-natureza-titulo">
+                                <a href="ciencia-da-natureza.html">Ciência da natureza</a>
+                                <button button-ciencias-natureza-down id="button-dropdown-down-ciencias-natureza">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-ciencias-natureza-up id="button-dropdown-up-ciencias-natureza">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
+
+                            <div dropdown-ciencias-natureza class="dropdown" id="dropdown-ciencias-natureza">
+                                <a href="ciencia-da-natureza-teofilo.html">Prof. Teófilo</a>
+                                <a href="ciencia-da-natureza-giovana.html">Prof. Giovana</a>
+                                <a href="ciencia-da-natureza-joao.html">Prof. João</a>
+                            </div>
+
+                        </div>
                         <a href="ciencia-humanas.html">Ciências humanas</a>
                         <a href="matematica.html">Matemática</a>
                         <a href="linguagens.html">Linguagens</a>
