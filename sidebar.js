@@ -9,32 +9,48 @@ const sidebarContainer = document.querySelector('[sidebar]');
 
 const cabecalho = document.querySelector('[cabecalho]');
 
-const botaoSobreDown = document.querySelector('[button-sobre-down]');
-const botaoSobreUp = document.querySelector('[button-sobre-up]');
-
-const listaSobre = document.querySelector('[dropdown-sobre]');
-const linhaSobre = document.querySelector('[linha-sobre]'); 
-
+const tituloAreas = document.querySelector('[title-section-nav-areas]');
 const botaoAreasDown = document.querySelector('[button-areas-down]');
 const botaoAreasUp = document.querySelector('[button-areas-up]');
 
 const listaAreas = document.querySelector('[dropdown-areas]');
 const linhaAreas = document.querySelector('[linha-areas]');
 
+const tituloSteam = document.querySelector('[title-section-nav-steam]');
 const botaoSteamDown = document.querySelector('[button-steam-down]');
 const botaoSteamUp = document.querySelector('[button-steam-up]');
 
 const listaSteam = document.querySelector('[dropdown-steam]');
 const linhaSteam = document.querySelector('[linha-steam]');
 
+const tituloProjetosLivres = document.querySelector('[projetos-livres-titulo]');
 const botaoProjetosLivresDown = document.querySelector('[button-projetos-livres-down]');
 const botaoProjetosLivresUp = document.querySelector('[button-projetos-livres-up]');
 
 const listaProjetosLivres = document.querySelector('[dropdown-projetos-livres]');
-const linhaProjetosLivres = document.querySelector('[linha-projetos-livres]');
+
+const tituloCienciasNatureza = document.querySelector('[ciencias-natureza-titulo]');
+const botaoCienciasNaturezaDown = document.querySelector('[button-ciencias-natureza-down]');
+const botaoCienciasNaturezaUp = document.querySelector('[button-ciencias-natureza-up]');
+
+const listaCienciasNatureza = document.querySelector('[dropdown-ciencias-natureza]');
+
+const tituloCienciasHumanas = document.querySelector('[ciencias-humanas-titulo]');
+const botaoCienciasHumanasDown = document.querySelector('[button-ciencias-humanas-down]');
+const botaoCienciasHumanasUp = document.querySelector('[button-ciencias-humanas-up]');
+
+const listaCienciasHumanas = document.querySelector('[dropdown-ciencias-humanas]');
+
+const tituloLinguagens = document.querySelector('[linguagens-titulo]');
+const botaoLinguagensDown = document.querySelector('[button-linguagens-down]');
+const botaoLinguagensUp = document.querySelector('[button-linguagens-up]');
+
+const listaLinguagens = document.querySelector('[dropdown-linguagens]');
+
 
 const main = document.querySelector('[main]');
 const fundoEscuro = document.querySelector('[fundoEscuro]');
+const rodape = document.querySelector('[rodape]');
 
 const sidebarReduzidaTamanho = "70px";
 main.onclick = () => {
@@ -42,6 +58,12 @@ main.onclick = () => {
         recolherMenuLateral();
     }
 };
+
+window.addEventListener("resize", () => {    
+    main.style.marginBottom = rodape.offsetHeight + "px";
+});
+
+main.style.marginBottom = rodape.offsetHeight + "px";
 
 botaoSidebarLeft.onclick = () => {
     recolherMenuLateral();
@@ -67,58 +89,80 @@ botaoSidebarRight.onclick = () => {
     cabecalho.style.marginLeft = "250px";*/
 };
 
-botaoSobreDown.onclick = () => {
-    aparecer(listaSobre);
-    desaparecer(botaoSobreDown);
-    desaparecer(linhaSobre);
-    aparecer(botaoSobreUp);
+tituloAreas.onclick = () => {
+    if ( botaoAreasUp.style.display == "none" ) {
+        aparecer(listaAreas);
+        desaparecer(botaoAreasDown);
+        desaparecer(linhaAreas);
+        aparecer(botaoAreasUp);
+    } else {
+        desaparecer(listaAreas);
+        desaparecer(botaoAreasUp);
+        aparecer(linhaAreas);
+        aparecer(botaoAreasDown);
+    }
 };
 
-botaoSobreUp.onclick = () => {
-    desaparecer(listaSobre);
-    desaparecer(botaoSobreUp);
-    aparecer(linhaSobre);
-    aparecer(botaoSobreDown);
+tituloSteam.onclick = () => {
+    if ( botaoSteamUp.style.display == "none" ) {
+        aparecer(listaSteam);
+        desaparecer(botaoSteamDown);
+        desaparecer(linhaSteam);
+        aparecer(botaoSteamUp);
+    } else {
+        desaparecer(listaSteam);
+        desaparecer(botaoSteamUp);
+        aparecer(linhaSteam);
+        aparecer(botaoSteamDown);
+    }
+}
+
+tituloProjetosLivres.onclick = () => {
+    if ( botaoProjetosLivresUp.style.display == "none" ) {
+        aparecer(listaProjetosLivres);
+        desaparecer(botaoProjetosLivresDown);
+        aparecer(botaoProjetosLivresUp);
+    } else {
+        desaparecer(listaProjetosLivres);
+        desaparecer(botaoProjetosLivresUp);
+        aparecer(botaoProjetosLivresDown);
+    }
 };
 
-botaoAreasDown.onclick = () => {
-    aparecer(listaAreas);
-    desaparecer(botaoAreasDown);
-    desaparecer(linhaAreas);
-    aparecer(botaoAreasUp);
+tituloCienciasNatureza.onclick = () => {
+    if ( botaoCienciasNaturezaUp.style.display == "none" ) {
+        aparecer(listaCienciasNatureza);
+        desaparecer(botaoCienciasNaturezaDown);
+        aparecer(botaoCienciasNaturezaUp);
+    } else {
+        desaparecer(listaCienciasNatureza);
+        desaparecer(botaoCienciasNaturezaUp);
+        aparecer(botaoCienciasNaturezaDown);
+    }
 };
 
-botaoAreasUp.onclick = () => {
-    desaparecer(listaAreas);
-    desaparecer(botaoAreasUp);
-    aparecer(linhaAreas);
-    aparecer(botaoAreasDown);
+tituloCienciasHumanas.onclick = () => {
+    if ( botaoCienciasHumanasUp.style.display == "none" ) {
+        aparecer(listaCienciasHumanas);
+        desaparecer(botaoCienciasHumanasDown);
+        aparecer(botaoCienciasHumanasUp);
+    } else {
+        desaparecer(listaCienciasHumanas);
+        desaparecer(botaoCienciasHumanasUp);
+        aparecer(botaoCienciasHumanasDown);
+    }
 };
 
-botaoSteamDown.onclick = () => {
-    aparecer(listaSteam);
-    desaparecer(botaoSteamDown);
-    desaparecer(linhaSteam);
-    aparecer(botaoSteamUp);
-};
-
-botaoSteamUp.onclick = () => {
-    desaparecer(listaSteam);
-    desaparecer(botaoSteamUp);
-    aparecer(linhaSteam);
-    aparecer(botaoSteamDown);
-};
-
-botaoProjetosLivresDown.onclick = () => {
-    aparecer(listaProjetosLivres);
-    desaparecer(botaoProjetosLivresDown);
-    aparecer(botaoProjetosLivresUp);
-};
-
-botaoProjetosLivresUp.onclick = () => {
-    desaparecer(listaProjetosLivres);
-    desaparecer(botaoProjetosLivresUp);
-    aparecer(botaoProjetosLivresDown);
+tituloLinguagens.onclick = () => {
+    if ( botaoLinguagensUp.style.display == "none" ) {
+        aparecer(listaLinguagens);
+        desaparecer(botaoLinguagensDown);
+        aparecer(botaoLinguagensUp);
+    } else {
+        desaparecer(listaLinguagens);
+        desaparecer(botaoLinguagensUp);
+        aparecer(botaoLinguagensDown);
+    }
 };
 
 function aparecer(elementoHtml) {

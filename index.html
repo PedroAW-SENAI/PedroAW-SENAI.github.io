@@ -29,12 +29,6 @@
                             <span class="fa fa-user"></span>
                             <span text class="text">Sobre</span>
                         </a>
-                        <button button-sobre-down class="button-dropdown-down">
-                            <span class="fa fa-chevron-down"></span>
-                        </button>
-                        <button button-sobre-up class="button-dropdown-up">
-                            <span class="fa fa-chevron-up"></span>
-                        </button>
                     </div>
                     
                     <div dropdown-sobre class="dropdown">
@@ -45,56 +39,106 @@
                 <hr linha-sobre>
                 
                 <li>
-                    <div class = "title-section-nav">
-                        <a href="areas-de-conhecimento.html">
+                    <div title-section-nav-areas class = "title-section-nav">
+                        <div class="titulo-principal-links">
                             <span class="fa fa-book"></span>
                             <span text class="text">Áreas de conhecimento</span>
-                        </a>
+                        </div>
                         <button button-areas-down class="button-dropdown-down">
                             <span class="fa fa-chevron-down"></span>
                     </button>
-                    <button button-areas-up class="button-dropdown-up">
+                    <button button-areas-up class="button-dropdown-up" style="display: none;">
                         <span class="fa fa-chevron-up"></span>
                     </button>
                     </div>
                     
                     <div dropdown-areas class="dropdown">
-                        <a href="ciencia-da-natureza.html">Ciência da natureza</a>
-                        <a href="ciencia-humanas.html">Ciências humanas</a>
+                        <div lista-ciencias-natureza class="lista-secundaria">
+                            <div ciencias-natureza-titulo class="lista-secundaria-titulo">
+                                <span class="titulo-secundario">Ciência da natureza</span>
+                                <button button-ciencias-natureza-down class="button-lista-secundaria-down">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-ciencias-natureza-up class="button-lista-secundaria-up" style="display: none;">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
+
+                            <div dropdown-ciencias-natureza class="dropdown dropdown-secundario">
+                                <a href="ciencia-da-natureza-teofilo.html">Prof. Teófilo</a>
+                                <a href="ciencia-da-natureza-giovana.html">Prof. Giovana</a>
+                                <a href="ciencia-da-natureza-joao.html">Prof. João</a>
+                            </div>
+
+                        </div>
+                        
+                        <div lista-ciencias-humanas class="lista-secundaria">
+                            <div ciencias-humanas-titulo class="lista-secundaria-titulo">
+                                <span class="titulo-secundario">Ciências humanas</span>
+                                <button button-ciencias-humanas-down class="button-lista-secundaria-down">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-ciencias-humanas-up class="button-lista-secundaria-up" style="display: none;">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
+
+                            <div dropdown-ciencias-humanas class="dropdown dropdown-secundario">
+                                <a href="ciencia-humanas-zulemar.html">Prof. Zulemar</a>
+                                <a href="ciencia-humanas-edimara.html">Prof. Edimara</a>                        
+                            </div>
+                        </div>
+                        
+                        <div lista-linguagens class="lista-secundaria">
+                            <div linguagens-titulo class="lista-secundaria-titulo">
+                                <span class="titulo-secundario">Linguagens</span>
+                                <button button-linguagens-down class="button-lista-secundaria-down">
+                                    <span class="fa fa-chevron-down"></span>
+                                </button>
+                                <button button-linguagens-up class="button-lista-secundaria-up" style="display: none;">
+                                    <span class="fa fa-chevron-up"></span>
+                                </button>
+                            </div>
+
+                            <div dropdown-linguagens class="dropdown dropdown-secundario">
+                                <a href="linguagens-adriano.html">Prof. Adriano</a>
+                                <a href="linguagens-jackeline.html">Prof. Jackeline</a>
+                            </div>
+                        </div>
+
                         <a href="matematica.html">Matemática</a>
-                        <a href="linguagens.html">Linguagens</a>
                     </div>
                 </li>
                 <hr linha-areas>
                 
                 <li>
-                    <div class = "title-section-nav">
-                        <a href="steam.html">
+                    <div title-section-nav-steam class = "title-section-nav">
+                        <div class="titulo-principal-links">
                             <span class="fa fa-atom"></span>
                             <span text class="text">STEAM</span>
-                        </a>
+                        </div>
                         <button button-steam-down class="button-dropdown-down">
                             <span class="fa fa-chevron-down"></span>
                         </button>
-                        <button button-steam-up class="button-dropdown-up">
+                        <button button-steam-up class="button-dropdown-up" style="display: none;">
                             <span class="fa fa-chevron-up"></span>
                         </button>
                     </div>
 
                     <div dropdown-steam class="dropdown">
-                        <div lista-projetos-livres class="lista-projetos-livres">
-                            <div projetos-livres-titulo class="projetos-livres-titulo">
-                                <a href="projetos-livres.html">Projetos Livres</a>
+                        <div lista-projetos-livres class="lista-secundaria">
+                            <div projetos-livres-titulo class="lista-secundaria-titulo">
+                                <span class="titulo-secundario">Projetos livres</span>
     
-                                <button button-projetos-livres-down id="button-dropdown-down-projetos-livres">
+                                <button button-projetos-livres-down class="button-lista-secundaria-down">
                                     <span class="fa fa-chevron-down"></span>
                                 </button>
-                                <button button-projetos-livres-up id="button-dropdown-up-projetos-livres">
+                                <button button-projetos-livres-up class="button-lista-secundaria-up" style="display: none;">
                                     <span class="fa fa-chevron-up"></span>
                                 </button>
                             </div>
 
-                            <div dropdown-projetos-livres class="dropdown" id="dropdown-projetos-livres">
+                            <div dropdown-projetos-livres class="dropdown dropdown-secundario">
                                 <a href="projetos-livres-teofilo.html">Prof. Teófilo</a>
                                 <a href="projetos-livres-eliane.html">Prof. Eliane</a>
                                 <a href="projetos-livres-sandro.html">Prof. Sandro</a>
@@ -146,7 +190,10 @@
             
         </div>
 
-
+        <footer class="rodape">
+            <p>2024 &copy; Todos os direitos reservados. Desenvolvido por Pedro Augusto Wilhelm</p>
+            <p>SESI SENAI STEAM 2933/2024</p>
+        </footer>
     </main>
 
 
