@@ -293,6 +293,13 @@ ol .fa{
         3px -3px 0 #FFF;
 }
 
+.titulo h2 {
+    color: #FFF;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
 .corpo-conteudo {
     margin: 20px 0 0 70px;
     display: flex;
@@ -300,7 +307,7 @@ ol .fa{
     padding-left: 2vw;
 }
 
-.corpo-conteudo h2 {
+.corpo-conteudo h3 {
     font-family: 'Short Stack', cursive;
     font-size: 3rem;
     color: #000;
