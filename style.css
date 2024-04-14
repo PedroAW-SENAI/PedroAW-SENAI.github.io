@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    hyphens: auto;
 }
 
 body {
@@ -294,6 +295,7 @@ ol .fa{
         -3px 3px 0 #FFF,
         -3px -3px 0 #FFF,
         3px -3px 0 #FFF;
+
 }
 
 .titulo h2 {
@@ -454,10 +456,6 @@ ol .fa{
     max-width: calc(100vw - 100px);
 }
 
-#texto-topico-avaliacoes {
-    max-width: 98%;
-}
-
 @media (max-width: 1150px) {
     .topicos {
        max-width: 80vw;
@@ -478,6 +476,10 @@ ol .fa{
     .titulo h1 {
         font-size: 4rem;
     }
+
+    .topicos h3 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -493,6 +495,10 @@ ol .fa{
     .titulo h1 {
         font-size: 3rem;
     }
+
+    .topicos h3 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -503,9 +509,25 @@ ol .fa{
 
 @media (max-width: 400px) {
     .topicos {
-       max-width: 55vw;
+       max-width: 60vw;
     }
     .titulo h1 {
         font-size: 2rem;
+    }
+
+    .topicos h3 {
+        font-size: 1.5rem;
+    }
+    .texto-topico p {
+        font-size: 1rem;
+    }
+    .topicos {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 300px) {
+    .titulo {
+        margin-left: 30px;
     }
 }
