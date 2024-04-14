@@ -13,6 +13,9 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    min-height: 20px;
+}
 
 .fundoEscuro {
     width: 100vw;
@@ -445,4 +448,64 @@ ol .fa{
     background-color: rgb(0 46 96);
     color: #FFF;
     font-family: 'Open Sans', sans-serif;
+}
+
+.rodape p {
+    max-width: calc(100vw - 100px);
+}
+
+#texto-topico-avaliacoes {
+    max-width: 98%;
+}
+
+@media (max-width: 1150px) {
+    .topicos {
+       max-width: 80vw;
+    }
+}
+
+@media (max-width: 920px) {
+    .topicos {
+       max-width: 77vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .topicos {
+       max-width: 75vw;
+    }
+
+    .titulo h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .topicos {
+       max-width: 71vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .topicos {
+       max-width: 66vw;
+    }
+    .titulo h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .topicos {
+       max-width: 61vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .topicos {
+       max-width: 55vw;
+    }
+    .titulo h1 {
+        font-size: 2rem;
+    }
 }

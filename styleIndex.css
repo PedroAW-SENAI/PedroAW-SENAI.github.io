@@ -1,0 +1,18 @@
+.lista-sobre-o-portifolio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.lista-sobre-o-portifolio a {
+    text-decoration: none;
+    color: rgb(0, 3, 141);
+}
+
+.lista-sobre-o-portifolio a:hover {
+    text-decoration: underline;
+}
+
+.texto-topico {
+    max-width: 98%;
+}
